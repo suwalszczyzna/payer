@@ -13,3 +13,4 @@ class Expense(models.Model):
     amount = models.DecimalField(max_digits=5, decimal_places=2)
     category = models.ForeignKey(ExpenseCategory, null=True, blank=True, on_delete=models.CASCADE)
     date = models.DateField()
+    attachment = models.FileField(upload_to='uploads/', null=True, blank=True)

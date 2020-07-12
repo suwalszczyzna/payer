@@ -36,7 +36,6 @@ class Bill(models.Model):
     endless = models.BooleanField(default=False)
     payment_day = models.IntegerField(null=True, blank=True)
     expenses = models.ManyToManyField(Expense, blank=True)
-    attachment = models.FileField(upload_to='uploads/', null=True, blank=True)
 
     def __str__(self):
         return self.name
